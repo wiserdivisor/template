@@ -1,6 +1,7 @@
 .container {
   align-items:center;
   margin: auto;
+  min-width: 50%;
   max-width: 60%;
   font-family: sans-serif;
   border-radius:10;
@@ -10,7 +11,7 @@
   display: flex;
   list-style: none;
   padding-left: 0;
-  z-index:3;
+  align-items:center;
 }
 
 .nav-link-item {

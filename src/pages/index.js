@@ -1,29 +1,64 @@
-import * as React from "react";
+import React from "react";
 import Layout from "../components/layout";
 import Table from "../components/table";
 import Section from "../components/section";
+import data from "../data/home_data.json";
+import imageData from "../data/slide_data.json";
 import { StaticImage } from "gatsby-plugin-image";
+import { Helmet } from "react-helmet";
+import Slider from "react-slick";
 
 const HomePage = () => {
+  const imageList = imageData.images;
+  const careerList = data.career_list;
+  const joinList = data.join_list;
+  const certification = data.certification;
+  const settings = {
+    autoplay:true,
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
+
   return (
     <Layout pageTitle="ÆVRT - Academy of Electric Vehicles Research and Technology">
-      <div style={{ height: 5 }} />
+      <Helmet>
+        <link
+          rel="stylesheet"
+          type="text/css"
+          charset="UTF-8"
+          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
+        />
+        <link
+          rel="stylesheet"
+          type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
+        />
+      </Helmet>
+      <div style={{ width: "100%", height: "10%", margin: "5px 0px 25px 0px" }}>
+        <Slider {...settings}>
+          <div><StaticImage src="../images/aggregate.jpg" alt="" /></div>
+          <div><StaticImage src="../images/bike.jpg" alt="" /></div>
+          <div><StaticImage src="../images/daily.jpg" alt="" /></div>
+          <div><StaticImage src="../images/prog.jpg" alt="" /></div>
+        </Slider>
+      </div>
       <StaticImage
         src="../images/bike_making.png"
         alt="some"
         style={{ borderBottomLeftRadius: 10, borderBottomRightRadius: 10 }}
       />
       <Section title="Join the E-Vehicles Revolution in India">
-        <p>
-          India is headed towards becoming a manufacturing hub for electric
-          vehicles in the next five years. The Indian EV industry growth is
-          estimated at Rs.500 billion by 2025. This industry will create the
-          largest employment and self-employment opportunities for semi-skilled
-          and drop out individuals.
-        </p>
+        India is headed towards becoming a manufacturing hub for electric
+        vehicles in the next five years. The Indian EV industry growth is
+        estimated at Rs.500 billion by 2025. This industry will create the
+        largest employment and self-employment opportunities for semi-skilled
+        and drop out individuals.
       </Section>
       <Section title="Techno-Commercial Scope of EV Industry">
-        <div style={{ flexDirection: "row" }}>
+        <div>
           <p>
             Presently the Electric Vehicle industry is experiencing an acute
             shortage of manpower with skills at par with the industry's standard
@@ -44,91 +79,40 @@ const HomePage = () => {
         </div>
       </Section>
 
-      <Section title='Start your career in "Electric Bike" manufacturing and service industry'>
+      <Section title="Start your career in the EV Industry">
         <div style={{ display: "flex" }}>
-          <StaticImage
-            src="../images/career.jpg"
-            alt="Career"
-            style={{ borderRadius: 10 }}
-          />
+          <div style={{ width: "75%" }}>
+            <StaticImage
+              src="../images/assemble.jpg"
+              alt="Career"
+              style={{ borderRadius: 10 }}
+            />
+          </div>
           <p>
             <ul style={{ marginTop: -10, marginBottom: -10, fontSize: 18 }}>
-              <li>EV Workshop / Service Station Supervisor</li>
-              <br />
-              <li>Maintenance and Repairs Technician</li>
-              <br />
-              <li>Field Service Technician</li>
-              <br />
-              <li>EV Designer</li>
-              <br />
-              <li>EV Digital Controller Programmer</li>
-              <br />
-              <li>EV Commercial Officer</li>
-              <br />
-              <li>Spare Parts Manager</li>
-              <br />
-              <li>Authorized Service Provider</li>
-              <br />
-              <li>Authorized Spare Parts Dealer</li>
-              <br />
-              <li>EV Manufacturing Unit Assembly Technician</li>
-              <br />
-              <li>Online E-Vehicles and spare parts Sales</li>
-              <br />
-              <li>EV Hub Motor Repair Specialist</li>
-              <br />
-              <li>EV Battery and Charging Stations Specialist</li>
-              <br />
-              <li>EV Procurement Officer</li>
-              <br />
-              <li>EV Conversion Specialist</li>
+              {careerList.map((x, index) => (
+                <div key={index}>
+                  <li>{x}</li>
+                  <br />
+                </div>
+              ))}
             </ul>
           </p>
         </div>
       </Section>
 
-      <Section
-        title={
-          <p style={{ marginLeft: 20 }}>
-            Who should Join the Training Program?
-          </p>
-        }
-      >
+      <Section title="Who should Join the Training Program?">
         <div style={{ display: "flex" }}>
           <ol>
-            <li>
-              <b style={{ color: "cadetblue" }}>Technical Individuals</b> who
-              are already working in the automobile maintenance, repairs &
-              allied services, garages, service centers, spare parts vendors
-              etc.
-            </li>
-            <br />
-            <li>
-              <b style={{ color: "cadetblue" }}>Non-Technical individuals</b>,
-              who wish to make a career in the EV-industry.
-            </li>
-            <br />
-            <li>
-              <b style={{ color: "cadetblue" }}>Diploma & Graduate Engineers</b>
-              , engaged in maintenance, design, service, etc. project managers,
-              and other individuals seeking applied theoretical and practical
-              knowledge and exposure. And/or desirous of a career change into
-              this new fast growing sector.
-            </li>
-            <br />
-            <li>
-              <b style={{ color: "cadetblue" }}>Commercial Individuals</b>,
-              commerce grauduates or persons from commercial backgrounds like
-              accounts, marketing, sales, logistics can utilize their skills by
-              upgrading their knowledge pertaining to the EV Industry and gain
-              employment in their relevant departments.
-            </li>
-            <br />
-            <li>
-              <b style={{ color: "cadetblue" }}>Minimum prerequisites:</b> Basic
-              Education (basic reading and writing). Physically able and ability
-              to perform the practicals and pursue the course.
-            </li>
+            {joinList.map((x, index) => (
+              <div key={index}>
+                <li>
+                  <b style={{ color: "cadetblue" }}>{x.head}</b>
+                  {x.body}
+                </li>
+                <br />
+              </div>
+            ))}
           </ol>
           <StaticImage
             style={{ height: 500, marginLeft: 40, borderRadius: 10 }}
@@ -139,25 +123,14 @@ const HomePage = () => {
       </Section>
 
       <Section title="Duration of the Training">
-        <p style={{ fontSize: 14 }}>
-          <Table />
-        </p>
+        <Table />
       </Section>
 
-      <Section title="">
-        <p></p>
-      </Section>
-
-      <Section title="">
-        <p></p>
-      </Section>
-
-      <Section title="">
-        <p></p>
-      </Section>
-
-      <Section title="">
-        <p></p>
+      <Section title="Certification">
+        {certification.part1}
+        <br />
+        <br />
+        {certification.part2}
       </Section>
     </Layout>
   );

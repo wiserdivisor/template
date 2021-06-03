@@ -1,0 +1,105 @@
+{
+  "career_list": [
+    "EV Workshop / Service Station Supervisor",
+    "Maintenance and Repairs Technician",
+    "Field Service Techniciar",
+    "EV Designer",
+    "EV Digital Controller Programmer",
+    "EV Commercial Officer",
+    "Spare Parts Manager",
+    "Authorized Service Provider",
+    "Authorized Spare Parts Dealer",
+    "EV Manufacturing Unit Assembly Technician",
+    "Online E-Vehicles and spare parts Sales",
+    "EV Hub Motor Repair Specialist",
+    "EV Battery and Charging Stations Specialist",
+    "EV Procurement Officer",
+    "EV Conversion Specialist"
+  ],
+  "join_list": [
+    {
+      "head": "Technical Individuals",
+      "body": " who are already working in the automobile maintenance, repairs & allied services, garages, services centers, spare parts vendors etc."
+    },
+    {
+      "head": "Non-Technical individuals",
+      "body": ", who wish to make a career in the EV-industry."
+    },
+    {
+      "head": "Diploma & Graduate Engineers",
+      "body": ", engaged in maintenance, design, service, etc. project managers, and other individuals seeking applied theoretical and practical knowledge and exposure and/or desirous of a career change into this new fast growing sector."
+    },
+    {
+      "head": "Commercial Individuals",
+      "body": ", commerce graduates or persons from commercial backgrounds like accounts, marketing, sales, logistics can utilize their skills by upgrading their knowledge pertaining to the EV Industry and gain employment in their relevant departments."
+    },
+    {
+      "head": "Upgrade yourself technically: ",
+      "body": "Individuals engaged in automobile repair and allied services of internal combustion engines (Petrol & Diesel engines) can upgrade their existing skills and start catering to the Electric Vehicle(EV) industry."
+    },
+    {
+      "head": "EV Infrastructure Services: ",
+      "body": "Individuals with financial capacity to establish EV charging stations and battery swapping stations can acquire the required technical knowledge and skills for starting these services."
+    },
+    {
+      "head": "Minimum pre-requisites:",
+      "body": " Basic Education (basic reading and writing). Physically able and ability to perform the practicals and pursue the course."
+    }
+  ],
+  "table": {
+    "table_head": [
+      "Sr.No.",
+      "Training Level & Pre-requisites",
+      "Course Contents",
+      "Duration"
+    ],
+    "table_data": [
+      {
+        "head": "Level 1:",
+        "desc": " Basic Education, individuals with basic technical knowledge & experience.",
+        "content": [
+          "Fundamentals of ICE & EVs",
+          "Fundamentals of Mechanical, Electrical / Electronics Technical"
+        ],
+        "duration": "30 Days"
+      },
+      {
+        "head": "Level 2:",
+        "desc": " ITI or experience in automobiles maintenance and repairs.",
+        "content": [
+          "All of the Above",
+          "Maintenance of EVs",
+          "Assembly of EVs"
+        ],
+        "duration": "45 Days"
+      },
+      {
+        "head": "Level 3:",
+        "desc": " Diploma in Engineering with experience in automobiles or Degree in Engineering.",
+        "content": [
+          "All of the Above",
+          "Design",
+          "Calculation",
+          "Repair of EVs",
+          "Conversion of EVs"
+        ],
+        "duration": "60 Days"
+      },
+      {
+        "head": "EV-Com:",
+        "desc": " Commercial Training in Electric Vehicles Industry. Individuals with acumen and/or experience of marketing sales of spares, tools & other allied equipment.",
+        "content": [
+          "Essential spares for EVs",
+          "Optional accessories required in EVs",
+          "Tools, Spares & Batteries",
+          "Controller, throttle & braking equipment"
+        ],
+        "duration": "30 Days"
+      }
+    ]
+  },
+  "certification": {
+    "part1": "Institute of Engineering & Applied Sciences-Mumbai (IEAS) is a member of the KBP Public Educational Consortium registered under the Bombay Public Trust Act 1950 (Govt of Maharashtra).",
+    "part2": "IEAS certifies all successful students upon successful completion and passing of written and practical examination of their trades. The Certificates are valid for employment & self employment purposes and/or for submitting and processing loan/ financial support proposals with banks, NBFC’s and other financial institutions."
+  }
+}

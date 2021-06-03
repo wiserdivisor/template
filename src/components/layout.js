@@ -1,21 +1,36 @@
-import * as React from "react";
+import React from "react";
 import { Link } from "gatsby";
-import {
-  container,
-  heading,
-  navLinks,
-  navLinkItem,
-  navLinkText,
-} from "./layout.module.css";
+import { navLinks, navLinkItem, navLinkText } from "./layout.module.css";
+import { StaticImage } from "gatsby-plugin-image";
 
 const Layout = ({ pageTitle, children }) => {
   return (
-    <main className={container}>
+    <main
+      style={{
+        margin: "auto",
+        alignItems: "center",
+        minWidth: 600,
+        maxWidth: "60%",
+        fontFamily: "sans-serif",
+      }}
+    >
       <nav>
         <ul className={navLinks}>
+          <li
+            style={{ height: 75, width: 75, marginRight: 50, marginLeft: 30 }}
+          >
+            <Link to="/">
+              <StaticImage src="../images/logo.jpg" alt="" />
+            </Link>
+          </li>
           <li className={navLinkItem}>
             <Link to="/" className={navLinkText}>
               Home
+            </Link>
+          </li>
+          <li className={navLinkItem}>
+            <Link to="/whyev" className={navLinkText}>
+              Why EV?
             </Link>
           </li>
           <li className={navLinkItem}>
@@ -37,6 +52,7 @@ const Layout = ({ pageTitle, children }) => {
           alignItems: "center",
           borderTopLeftRadius: 10,
           borderTopRightRadius: 10,
+          marginTop: -20,
         }}
       >
         <p
@@ -51,19 +67,31 @@ const Layout = ({ pageTitle, children }) => {
         >
           {pageTitle}
         </p>
-        <hr
-          style={{
-            color: "white",
-            backgroundColor: "white",
-            fontSize: 5,
-            width: "95%",
-            height: 1,
-            border: "none",
-          }}
-        />
-        <p style={{ fontSize: 12, color: "white", textAlign: "center", marginTop:20 }}>
-          A KBP Trust & Institute of Engineering and Applied Sciences Initiative
-        </p>
+        {pageTitle[0] === "Æ" ? (
+          <>
+            <hr
+              style={{
+                color: "white",
+                backgroundColor: "white",
+                fontSize: 5,
+                width: "95%",
+                height: 1,
+                border: "none",
+              }}
+            />
+            <p
+              style={{
+                fontSize: 12,
+                color: "white",
+                textAlign: "center",
+                marginTop: 20,
+              }}
+            >
+              A KBP Trust & Institute of Engineering and Applied Sciences
+              Initiative
+            </p>
+          </>
+        ) : null}
       </div>
       {children}
     </main>
