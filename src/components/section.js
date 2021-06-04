@@ -7,7 +7,7 @@ const Section = ({ title, children }) => {
       style={{
         padding: "0px 30px 15px 20px",
         borderRadius: 10,
-        boxShadow: "0px 5px 5px #888888",
+        boxShadow: "0px 5px 5px #888",
         background: "linear-gradient(to left, #f8f8f8, white)",
         marginTop: 20,
       }}

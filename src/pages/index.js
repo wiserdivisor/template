@@ -37,12 +37,12 @@ const HomePage = () => {
           href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
         />
       </Helmet>
-      <div style={{ width: "100%", height: "10%", margin: "5px 0px 25px 0px" }}>
+      <div style={{ width: "100%", height:'10%' , margin: "5px 0px 25px 0px" }}>
         <Slider {...settings}>
           <div><StaticImage src="../images/aggregate.jpg" alt="" /></div>
           <div><StaticImage src="../images/bike.jpg" alt="" /></div>
           <div><StaticImage src="../images/daily.jpg" alt="" /></div>
-          <div><StaticImage src="../images/prog.jpg" alt="" /></div>
+          <div><StaticImage src="../images/scoot.jpg" alt="" /></div>
         </Slider>
       </div>
       <StaticImage
