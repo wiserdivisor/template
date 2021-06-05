@@ -1,12 +1,21 @@
-import React from 'react';
-import Layout from '../components/layout';
+import React from "react";
+import Layout from "../components/layout";
 
 const RegisterPage = () => {
-  return(
+  return (
     <Layout pageTitle="Register">
-      <p>This is the Register page.</p>
+      <div style={{ textAlign:'center' }}>
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLSccBhlRR1Yh2ZnvXHqq8YSxLwQ5agH57a0ILHp9XRuEg7uDUA/viewform?embedded=true"
+          width="500"
+          height="1500"
+          frameborder="0"
+        >
+          Loading…
+        </iframe>
+      </div>
     </Layout>
-  )
-}
+  );
+};
 
 export default RegisterPage;

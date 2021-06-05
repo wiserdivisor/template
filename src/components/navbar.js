@@ -1,16 +1,28 @@
 import React from "react";
 import { Link } from "gatsby";
-import { navbar, navLinks, navLinkItem, navLinkText } from './layout.module.css';
+import {
+  navbar,
+  navLinks,
+  navLinkItem,
+  navLinkText,
+} from "./layout.module.css";
 
 function Navbar() {
   return (
     <div className={navbar}>
       <div className={navLinks}>
-        <div className={navLinkItem} style={{ backgroundColor: "#fbc6a4", paddingLeft:30 }}>
+        <div className={navLinkItem} style={{ backgroundColor: "#feddbe" }}>
           <Link to="/" className={navLinkText}>
             Home
           </Link>
         </div>
+
+        <div className={navLinkItem} style={{ backgroundColor: "#fbc6a4" }}>
+          <Link to="/about" className={navLinkText}>
+            About Us
+          </Link>
+        </div>
+
         <div className={navLinkItem} style={{ backgroundColor: "#f4a9a8" }}>
           <Link to="/whyev" className={navLinkText}>
             Why EV?
@@ -21,6 +33,7 @@ function Navbar() {
             Contact
           </Link>
         </div>
+
         <div className={navLinkItem} style={{ backgroundColor: "#a58faa" }}>
           <Link to="/register" className={navLinkText}>
             Register
@@ -28,7 +41,7 @@ function Navbar() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 export default Navbar;

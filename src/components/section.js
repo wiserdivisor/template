@@ -6,10 +6,10 @@ const Section = ({ title, children }) => {
     <div
       style={{
         padding: "0px 30px 15px 20px",
+        margin: "15px 0px 0px 0px",
         borderRadius: 10,
         boxShadow: "0px 5px 5px #888",
         background: "linear-gradient(to left, #f8f8f8, white)",
-        marginTop: 20,
       }}
     >
       <div style={{ display: "flex", alignItems:'center' }}>

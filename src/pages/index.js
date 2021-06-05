@@ -11,10 +11,15 @@ import Slider from "react-slick";
 const HomePage = () => {
   const imageList = imageData.images;
   const careerList = data.career_list;
+  const joinRev = data.join_rev;
+  const scopeDesc = data.scope;
   const joinList = data.join_list;
   const certification = data.certification;
+  const featList = data.feat_list;
+  const trainObj = data.train_obj;
+  const practical = data.practical;
   const settings = {
-    autoplay:true,
+    autoplay: true,
     dots: true,
     infinite: true,
     speed: 500,
@@ -23,7 +28,7 @@ const HomePage = () => {
   };
 
   return (
-    <Layout pageTitle="ÆVRT - Academy of Electric Vehicles Research and Technology">
+    <Layout pageTitle="Academy of Electric Vehicles Research and Technology">
       <Helmet>
         <link
           rel="stylesheet"
@@ -37,12 +42,23 @@ const HomePage = () => {
           href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
         />
       </Helmet>
-      <div style={{ width: "100%", height:'10%' , margin: "5px 0px 25px 0px" }}>
+      <div style={{ width: "100%", height: "10%", margin: "5px 0px 25px 0px" }}>
         <Slider {...settings}>
-          <div><StaticImage src="../images/aggregate.jpg" alt="" /></div>
-          <div><StaticImage src="../images/bike.jpg" alt="" /></div>
-          <div><StaticImage src="../images/daily.jpg" alt="" /></div>
-          <div><StaticImage src="../images/scoot.jpg" alt="" /></div>
+          <div>
+            <StaticImage src="../images/daily.png" alt="" />
+          </div>
+          <div>
+            <StaticImage src="../images/scoot.png" alt="" />
+          </div>
+          <div>
+            <StaticImage src="../images/aggregate.png" alt="" />
+          </div>
+          <div>
+            <StaticImage src="../images/bike.png" alt="" />
+          </div>
+          <div>
+            <StaticImage src="../images/swap.png" alt="" />
+          </div>
         </Slider>
       </div>
       <StaticImage
@@ -51,25 +67,15 @@ const HomePage = () => {
         style={{ borderBottomLeftRadius: 10, borderBottomRightRadius: 10 }}
       />
       <Section title="Join the E-Vehicles Revolution in India">
-        India is headed towards becoming a manufacturing hub for electric
-        vehicles in the next five years. The Indian EV industry growth is
-        estimated at Rs.500 billion by 2025. This industry will create the
-        largest employment and self-employment opportunities for semi-skilled
-        and drop out individuals.
+        {joinRev}
       </Section>
       <Section title="Techno-Commercial Scope of EV Industry">
         <div>
           <p>
-            Presently the Electric Vehicle industry is experiencing an acute
-            shortage of manpower with skills at par with the industry's standard
-            requirements. EV-OEM's are aggressuvely gearing up to increase their
-            production capacity. As a result there will be an increase in job
-            (Employment and Self-Employment) opportunities in Indian EV-sector.
+            {scopeDesc.part1}
             <br />
             <br />
-            Ola Electric Bike manufacturing plant in India will be the largest
-            scooter manufacturing facility in the world that will create nearly
-            10,000 direct jobs.
+            {scopeDesc.part2}
           </p>
           <StaticImage
             src="../images/map.jpg"
@@ -79,11 +85,11 @@ const HomePage = () => {
         </div>
       </Section>
 
-      <Section title="Start your career in the EV Industry">
+      <Section title="Start your career in EV Industry">
         <div style={{ display: "flex" }}>
           <div style={{ width: "75%" }}>
             <StaticImage
-              src="../images/assemble.jpg"
+              src="../images/assemble.png"
               alt="Career"
               style={{ borderRadius: 10 }}
             />
@@ -114,11 +120,13 @@ const HomePage = () => {
               </div>
             ))}
           </ol>
-          <StaticImage
-            style={{ height: 500, marginLeft: 40, borderRadius: 10 }}
-            src="../images/rsz_repair.jpg"
-            alt="repair"
-          />
+          <div>
+            <StaticImage
+              style={{ borderRadius: 10 }}
+              src="../images/rsz_repair.png"
+              alt="repair"
+            />
+          </div>
         </div>
       </Section>
 
@@ -127,10 +135,41 @@ const HomePage = () => {
       </Section>
 
       <Section title="Certification">
-        {certification.part1}
-        <br />
-        <br />
-        {certification.part2}
+        <div style={{ display: "flex" }}>
+          <div>
+            <StaticImage src="../images/cert.jpeg" alt="" />
+          </div>
+          <div style={{ marginTop: 10, width: "90%" }}>
+            {certification.part1}
+            <br />
+            <br />
+            {certification.part2}
+          </div>
+        </div>
+      </Section>
+
+      <Section title="Prominent features of the Training Program">
+        <ol style={{ fontSize: 14 }}>
+          {featList.map((x, index) => (
+            <li key={index}>{x}</li>
+          ))}
+        </ol>
+      </Section>
+
+      <Section title="Training Objectives">
+        <ul style={{ fontSize: 14 }}>
+          {trainObj.map((x, index) => (
+            <li key={index}>{x}</li>
+          ))}
+        </ul>
+      </Section>
+
+      <Section title="Practical Training">
+        <ul style={{ fontSize: 14 }}>
+          {practical.map((x, index) => (
+            <li key={index}>{x}</li>
+          ))}
+        </ul>
       </Section>
     </Layout>
   );
