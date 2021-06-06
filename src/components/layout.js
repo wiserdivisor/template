@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "gatsby";
 import {
   container,
   siteLogo,
@@ -8,18 +7,26 @@ import {
   headerSubtext,
   divider,
 } from "./layout.module.css";
+import { Helmet } from "react-helmet";
 import Navbar from "./navbar";
 import { StaticImage } from "gatsby-plugin-image";
 
 const Layout = ({ pageTitle, children }) => {
   return (
-    <div className={container}>
+    <main className={container}>
+      <Helmet htmlAttributes={{ lang: "en" }}>
+        <meta
+          name="description"
+          content="EV Course - Electric Vehicles Assembly, Maintenence & Repairs Training. Includes sizing, testing, troubleshooting and component-level repairs of battery, EV Controller, DC to DC converter and battery pack assembly. EV motors and hubs."
+        />
+        <title>{pageTitle} - ÆVRT</title>
+      </Helmet>
       <div className={headerDiv}>
         <div
           style={{
             display: "flex",
             alignItems: "center",
-            justifyContent: "center",
+            justifyContent: pageTitle[1] === "c" ? "center" : "left",
           }}
         >
           <div className={siteLogo}>
@@ -49,14 +56,13 @@ const Layout = ({ pageTitle, children }) => {
           color: "white",
           fontSize: 10,
           padding: "10px 0px 10px 0px",
-          backgroundColor: "rgba(0,173,181,0.5)",
+          backgroundColor: "rgba(0,0,0,0.5)",
         }}
       >
-        Copyright © 2021 AEVRT India <br />
-        Designed and developed by 4'Sight Technologies |
-        vigneshreddy.mumbai@gmail.com
+        Designed and developed by vigneshreddy.mumbai@gmail.com | Copyright ©
+        2021 AEVRT (India)
       </div>
-    </div>
+    </main>
   );
 };
 

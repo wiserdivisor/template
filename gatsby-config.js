@@ -1,6 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: "template",
+    title: `ÆVRT`,
+    charSet: `utf-8`,
+    siteUrl: `https://trainingev.gatsbyjs.io`,
+    description: `EV - Electric Vehicles Assembly, Maintenence & Repairs Training.`
   },
   plugins: [
     "gatsby-plugin-gatsby-cloud",

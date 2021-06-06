@@ -10,6 +10,7 @@ const RegisterPage = () => {
           width="500"
           height="1500"
           frameborder="0"
+          title="Registration Google Form"
         >
           Loading…
         </iframe>

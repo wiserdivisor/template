@@ -11,19 +11,19 @@ function Navbar() {
   return (
     <div className={navbar}>
       <div className={navLinks}>
-        <div className={navLinkItem} style={{ backgroundColor: "#feddbe" }}>
+        <div className={navLinkItem} style={{ backgroundColor: "#ffb35c" }}>
           <Link to="/" className={navLinkText}>
             Home
           </Link>
         </div>
 
-        <div className={navLinkItem} style={{ backgroundColor: "#fbc6a4" }}>
+        <div className={navLinkItem} style={{ backgroundColor: "#ff7d59" }}>
           <Link to="/about" className={navLinkText}>
             About Us
           </Link>
         </div>
 
-        <div className={navLinkItem} style={{ backgroundColor: "#f4a9a8" }}>
+        <div className={navLinkItem} style={{ backgroundColor: "#eb8988" }}>
           <Link to="/whyev" className={navLinkText}>
             Why EV?
           </Link>

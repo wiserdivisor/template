@@ -3,13 +3,11 @@ import Layout from "../components/layout";
 import Table from "../components/table";
 import Section from "../components/section";
 import data from "../data/home_data.json";
-import imageData from "../data/slide_data.json";
 import { StaticImage } from "gatsby-plugin-image";
 import { Helmet } from "react-helmet";
 import Slider from "react-slick";
 
 const HomePage = () => {
-  const imageList = imageData.images;
   const careerList = data.career_list;
   const joinRev = data.join_rev;
   const scopeDesc = data.scope;
@@ -19,6 +17,7 @@ const HomePage = () => {
   const trainObj = data.train_obj;
   const practical = data.practical;
   const settings = {
+    arrows: false,
     autoplay: true,
     dots: true,
     infinite: true,
@@ -42,28 +41,34 @@ const HomePage = () => {
           href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
         />
       </Helmet>
-      <div style={{ width: "100%", height: "10%", margin: "5px 0px 25px 0px" }}>
+      <div style={{ width: "100%", height: "10%", margin: "5px 0px 5px 0px" }}>
         <Slider {...settings}>
           <div>
-            <StaticImage src="../images/daily.png" alt="" />
+            <StaticImage src="../images/daily.png" alt="Man riding an EV scooter" />
           </div>
           <div>
-            <StaticImage src="../images/scoot.png" alt="" />
+            <StaticImage src="../images/scoot.png" alt="EV scooter in meadows" />
           </div>
           <div>
-            <StaticImage src="../images/aggregate.png" alt="" />
+            <StaticImage src="../images/cost.png" alt="Swapping EV battery" />
+          </div>
+
+          <div>
+            <StaticImage src="../images/aggregate.png" alt="A row of EV scooters" />
           </div>
           <div>
-            <StaticImage src="../images/bike.png" alt="" />
+            <StaticImage src="../images/bike.png" alt="Man fixing EV bike" />
           </div>
+
           <div>
-            <StaticImage src="../images/swap.png" alt="" />
+            <StaticImage src="../images/swap.png" alt="Swapping EV battery" />
           </div>
+
         </Slider>
       </div>
       <StaticImage
         src="../images/bike_making.png"
-        alt="some"
+        alt="Making EV bike"
         style={{ borderBottomLeftRadius: 10, borderBottomRightRadius: 10 }}
       />
       <Section title="Join the E-Vehicles Revolution in India">
@@ -79,7 +84,7 @@ const HomePage = () => {
           </p>
           <StaticImage
             src="../images/map.jpg"
-            alt="Map"
+            alt="Indian map for EV market"
             style={{ borderRadius: 10 }}
           />
         </div>
@@ -90,17 +95,17 @@ const HomePage = () => {
           <div style={{ width: "75%" }}>
             <StaticImage
               src="../images/assemble.png"
-              alt="Career"
+              alt="Assembling an EV scooter"
               style={{ borderRadius: 10 }}
             />
           </div>
           <p>
             <ul style={{ marginTop: -10, marginBottom: -10, fontSize: 18 }}>
               {careerList.map((x, index) => (
-                <div key={index}>
-                  <li>{x}</li>
+                <li key={index}>
+                  {x}
                   <br />
-                </div>
+                </li>
               ))}
             </ul>
           </p>
@@ -109,22 +114,20 @@ const HomePage = () => {
 
       <Section title="Who should Join the Training Program?">
         <div style={{ display: "flex" }}>
-          <ol>
+          <ol style={{marginRight:10}}>
             {joinList.map((x, index) => (
-              <div key={index}>
-                <li>
-                  <b style={{ color: "cadetblue" }}>{x.head}</b>
-                  {x.body}
-                </li>
+              <li key={index}>
+                <b style={{ color: "cadetblue" }}>{x.head}</b>
+                {x.body}
                 <br />
-              </div>
+              </li>
             ))}
           </ol>
           <div>
             <StaticImage
               style={{ borderRadius: 10 }}
               src="../images/rsz_repair.png"
-              alt="repair"
+              alt="Man repairing scooter tire"
             />
           </div>
         </div>
@@ -137,9 +140,9 @@ const HomePage = () => {
       <Section title="Certification">
         <div style={{ display: "flex" }}>
           <div>
-            <StaticImage src="../images/cert.jpeg" alt="" />
+            <StaticImage src="../images/cert.jpeg" alt="EV training certificate" />
           </div>
-          <div style={{ marginTop: 10, width: "90%" }}>
+          <div style={{ marginTop: 10, marginLeft:10, width: "90%" }}>
             {certification.part1}
             <br />
             <br />
