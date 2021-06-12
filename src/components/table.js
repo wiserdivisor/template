@@ -5,8 +5,8 @@ const Table = () => {
   const tableData = data.table;
   return (
     <table>
-      <tr>
-        {tableData.table_head.map((head,index) => (
+      <tr style={{ border: "1px solid black" }}>
+        {tableData.table_head.map((head, index) => (
           <th key={index}>{head}</th>
         ))}
       </tr>
@@ -19,8 +19,10 @@ const Table = () => {
           </td>
           <td>
             <ul>
-              {row.content.map((point,index) => (
-                <li key={index}>{point}</li>
+              {row.content.map((point, index) => (
+                <li key={index} style={{ width: "16vw" }}>
+                  {point}
+                </li>
               ))}
             </ul>
           </td>

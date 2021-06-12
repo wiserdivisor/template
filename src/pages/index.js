@@ -1,7 +1,7 @@
 import React from "react";
 import Layout from "../components/layout";
 import Table from "../components/table";
-import Section from "../components/section";
+import {Section} from "../components/section";
 import data from "../data/home_data.json";
 import { StaticImage } from "gatsby-plugin-image";
 import { Helmet } from "react-helmet";
@@ -19,7 +19,6 @@ const HomePage = () => {
   const settings = {
     arrows: false,
     autoplay: true,
-    dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
@@ -41,20 +40,36 @@ const HomePage = () => {
           href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
         />
       </Helmet>
-      <div style={{ width: "100%", height: "10%", margin: "5px 0px 5px 0px" }}>
+      <div
+        style={{
+          width: "100%",
+          height: "10%",
+          margin: "5px 0px 0px 0px",
+          overflow: "hidden",
+        }}
+      >
         <Slider {...settings}>
           <div>
-            <StaticImage src="../images/daily.png" alt="Man riding an EV scooter" />
+            <StaticImage
+              src="../images/daily.png"
+              alt="Man riding an EV scooter"
+            />
           </div>
           <div>
-            <StaticImage src="../images/scoot.png" alt="EV scooter in meadows" />
+            <StaticImage
+              src="../images/scoot.png"
+              alt="EV scooter in meadows"
+            />
           </div>
           <div>
             <StaticImage src="../images/cost.png" alt="Swapping EV battery" />
           </div>
 
           <div>
-            <StaticImage src="../images/aggregate.png" alt="A row of EV scooters" />
+            <StaticImage
+              src="../images/aggregate.png"
+              alt="A row of EV scooters"
+            />
           </div>
           <div>
             <StaticImage src="../images/bike.png" alt="Man fixing EV bike" />
@@ -63,7 +78,6 @@ const HomePage = () => {
           <div>
             <StaticImage src="../images/swap.png" alt="Swapping EV battery" />
           </div>
-
         </Slider>
       </div>
       <StaticImage
@@ -74,7 +88,7 @@ const HomePage = () => {
       <Section title="Join the E-Vehicles Revolution in India">
         {joinRev}
       </Section>
-      <Section title="Techno-Commercial Scope of EV Industry">
+      <Section title="Techno-Commercial Scope of EV Industry" idName="scope">
         <div>
           <p>
             {scopeDesc.part1}
@@ -90,59 +104,67 @@ const HomePage = () => {
         </div>
       </Section>
 
-      <Section title="Start your career in EV Industry">
-        <div style={{ display: "flex" }}>
-          <div style={{ width: "75%" }}>
-            <StaticImage
-              src="../images/assemble.png"
-              alt="Assembling an EV scooter"
-              style={{ borderRadius: 10 }}
-            />
-          </div>
-          <p>
-            <ul style={{ marginTop: -10, marginBottom: -10, fontSize: 18 }}>
-              {careerList.map((x, index) => (
-                <li key={index}>
-                  {x}
-                  <br />
-                </li>
-              ))}
-            </ul>
-          </p>
+      <Section title="Start your career in EV Industry" idName="career">
+        <div style={{ overflow: "hidden" }}>
+          <StaticImage
+            src="../images/assemble.png"
+            alt="Assembling an EV scooter"
+            style={{
+              borderRadius: 10,
+              width: 350,
+              float: "left",
+              marginRight: 20,
+            }}
+          />
+          <ul>
+            {careerList.map((x, index) => (
+              <li key={index}>
+                {x}
+                <br />
+                <br />
+              </li>
+            ))}
+          </ul>
         </div>
       </Section>
 
-      <Section title="Who should Join the Training Program?">
-        <div style={{ display: "flex" }}>
-          <ol style={{marginRight:10}}>
+      <Section title="Who should Join the Training Program?" idName="join">
+        <div style={{ overflow: "hidden" }}>
+          <StaticImage
+            style={{
+              borderRadius: 10,
+              width: 300,
+              float: "right",
+              marginLeft: 20,
+            }}
+            src="../images/rsz_repair.png"
+            alt="Man repairing scooter tire"
+          />
+          <ol style={{ marginRight: 10 }}>
             {joinList.map((x, index) => (
               <li key={index}>
                 <b style={{ color: "cadetblue" }}>{x.head}</b>
                 {x.body}
                 <br />
+                <br />
               </li>
             ))}
           </ol>
-          <div>
-            <StaticImage
-              style={{ borderRadius: 10 }}
-              src="../images/rsz_repair.png"
-              alt="Man repairing scooter tire"
-            />
-          </div>
         </div>
       </Section>
 
-      <Section title="Duration of the Training">
+      <Section title="Duration of the Training" idName="duration">
         <Table />
       </Section>
 
-      <Section title="Certification">
-        <div style={{ display: "flex" }}>
-          <div>
-            <StaticImage src="../images/cert.jpeg" alt="EV training certificate" />
-          </div>
-          <div style={{ marginTop: 10, marginLeft:10, width: "90%" }}>
+      <Section title="Certification" idName="certification">
+        <div style={{ display: "grid", placeItems: "center" }}>
+          <StaticImage
+            src="../images/cert.jpeg"
+            alt="EV training certificate"
+            style={{ width: "30vw" }}
+          />
+          <div style={{ marginTop: 10 }}>
             {certification.part1}
             <br />
             <br />
@@ -151,7 +173,7 @@ const HomePage = () => {
         </div>
       </Section>
 
-      <Section title="Prominent features of the Training Program">
+      <Section title="Prominent features of the Training Program" idName="features">
         <ol style={{ fontSize: 14 }}>
           {featList.map((x, index) => (
             <li key={index}>{x}</li>
@@ -159,7 +181,7 @@ const HomePage = () => {
         </ol>
       </Section>
 
-      <Section title="Training Objectives">
+      <Section title="Training Objectives" idName="objectives">
         <ul style={{ fontSize: 14 }}>
           {trainObj.map((x, index) => (
             <li key={index}>{x}</li>
@@ -167,7 +189,7 @@ const HomePage = () => {
         </ul>
       </Section>
 
-      <Section title="Practical Training">
+      <Section title="Practical Training" idName="practical">
         <ul style={{ fontSize: 14 }}>
           {practical.map((x, index) => (
             <li key={index}>{x}</li>
