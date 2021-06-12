@@ -163,7 +163,7 @@ const Layout = ({ pageTitle, children }) => {
             />
           </a>
           <a
-            href="mailto:ieas.training@gmail.com"
+            href="mailto:aevrt.india@gmail.com"
             target="_blank"
             rel="noreferrer"
           >

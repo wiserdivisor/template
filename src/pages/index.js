@@ -153,7 +153,7 @@ const HomePage = () => {
         </div>
       </Section>
 
-      <Section title="Duration of the Training" idName="duration">
+      <Section title="Duration of the Training" idName="duration" textAlign="initial">
         <Table />
       </Section>
 

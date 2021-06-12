@@ -31,6 +31,7 @@ const Section = ({
   showPoint,
   showHr,
   borderColor = "dimgrey",
+  textAlign="justify",
   children
 }) => {
   return (
@@ -44,7 +45,7 @@ const Section = ({
         boxShadow: "0px 5px 5px #888",
         background: "linear-gradient(to left, #f8f8f8, white)",
         scrollMarginTop: "1em",
-        textAlign:'justify'
+        textAlign:textAlign
       }}
     >
       <SectionHeader

@@ -56,10 +56,10 @@ function Business() {
         programme. For futher details kindly share your personal and
         professional profile on{" "}
         <a
-          href="mailto:ieas.training@gmail.com"
+          href="mailto:aevrt.india@gmail.com"
           style={{ textDecoration: "none" }}
         >
-          ieas.training@gmail.com
+          aevrt.india@gmail.com
         </a>
       </Section>
       <Section title="Project Consultancy">
