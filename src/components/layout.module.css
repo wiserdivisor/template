@@ -1,12 +1,6 @@
 .container {
-  align-items: center;
-  justify-content: center;
-  margin: auto;
-  min-width: 500px;
-  max-width: 60%;
-  padding: 0px 10px 0px 0px;
   font-family: sans-serif;
-  display: block;
+  margin:-10px;
 }
 
 .dropDown {
@@ -38,6 +32,7 @@
 
 .navLinks {
   display: flex;
+  justify-content:center;
 }
 
 .navLinkItem {
@@ -64,8 +59,8 @@
   background-color: #3c746b;
   align-items: center;
   margin-top: 10px;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  //border-top-left-radius: 10px;
+  //border-top-right-radius: 10px;
 }
 
 .headerText {
@@ -95,7 +90,7 @@
 }
 
 .footerIcon{
-  width: 25px;
+  width: 30px;
   filter: invert(1);
-  margin-bottom: 10px;
+  margin: 10px 20px 0px 0px;
 }

@@ -13,20 +13,20 @@ const Table = () => {
       {tableData.table_data.map((row, index) => (
         <tr key={index}>
           <td>{index + 1}.</td>
-          <td>
+          <td style={{ width:'40%' }}>
             <b style={{ color: "cadetblue" }}>{row.head}</b>
             {row.desc}
           </td>
-          <td>
+          <td style={{ width:'50%' }}>
             <ul>
               {row.content.map((point, index) => (
-                <li key={index} style={{ width: "16vw" }}>
+                <li key={index}>
                   {point}
                 </li>
               ))}
             </ul>
           </td>
-          <td>{row.duration}</td>
+          <td style={{ width:'10%' }}>{row.duration}</td>
         </tr>
       ))}
     </table>

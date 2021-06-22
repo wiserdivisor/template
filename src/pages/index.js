@@ -1,7 +1,7 @@
 import React from "react";
 import Layout from "../components/layout";
 import Table from "../components/table";
-import {Section} from "../components/section";
+import { Section } from "../components/section";
 import data from "../data/home_data.json";
 import { StaticImage } from "gatsby-plugin-image";
 import { Helmet } from "react-helmet";
@@ -42,7 +42,6 @@ const HomePage = () => {
       </Helmet>
       <div
         style={{
-          width: "100%",
           height: "10%",
           margin: "5px 0px 0px 0px",
           overflow: "hidden",
@@ -83,7 +82,11 @@ const HomePage = () => {
       <StaticImage
         src="../images/bike_making.png"
         alt="Making EV bike"
-        style={{ borderBottomLeftRadius: 10, borderBottomRightRadius: 10 }}
+        style={{
+          margin: "auto",
+          borderBottomLeftRadius: 10,
+          borderBottomRightRadius: 10,
+        }}
       />
       <Section title="Join the E-Vehicles Revolution in India">
         {joinRev}
@@ -111,9 +114,9 @@ const HomePage = () => {
             alt="Assembling an EV scooter"
             style={{
               borderRadius: 10,
-              width: 350,
+              width: 450,
               float: "left",
-              marginRight: 20,
+              margin: "0px 20px 20px 0px",
             }}
           />
           <ul>
@@ -133,14 +136,14 @@ const HomePage = () => {
           <StaticImage
             style={{
               borderRadius: 10,
-              width: 300,
+              width: 450,
               float: "right",
-              marginLeft: 20,
+              margin: "0px 0px 20px 20px",
             }}
             src="../images/rsz_repair.png"
             alt="Man repairing scooter tire"
           />
-          <ol style={{ marginRight: 10 }}>
+          <ol>
             {joinList.map((x, index) => (
               <li key={index}>
                 <b style={{ color: "cadetblue" }}>{x.head}</b>
@@ -153,7 +156,11 @@ const HomePage = () => {
         </div>
       </Section>
 
-      <Section title="Duration of the Training" idName="duration" textAlign="initial">
+      <Section
+        title="Duration of the Training"
+        idName="duration"
+        textAlign="left"
+      >
         <Table />
       </Section>
 
@@ -162,7 +169,7 @@ const HomePage = () => {
           <StaticImage
             src="../images/cert.jpeg"
             alt="EV training certificate"
-            style={{ width: "30vw" }}
+            style={{ minWidth: 300, maxWidth:'20vw' }}
           />
           <div style={{ marginTop: 10 }}>
             {certification.part1}
@@ -173,7 +180,10 @@ const HomePage = () => {
         </div>
       </Section>
 
-      <Section title="Prominent features of the Training Program" idName="features">
+      <Section
+        title="Prominent features of the Training Program"
+        idName="features"
+      >
         <ol style={{ fontSize: 14 }}>
           {featList.map((x, index) => (
             <li key={index}>{x}</li>

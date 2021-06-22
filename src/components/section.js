@@ -31,8 +31,8 @@ const Section = ({
   showPoint,
   showHr,
   borderColor = "dimgrey",
-  textAlign="justify",
-  children
+  textAlign = "justify",
+  children,
 }) => {
   return (
     <div
@@ -45,7 +45,7 @@ const Section = ({
         boxShadow: "0px 5px 5px #888",
         background: "linear-gradient(to left, #f8f8f8, white)",
         scrollMarginTop: "1em",
-        textAlign:textAlign
+        textAlign: textAlign,
       }}
     >
       <SectionHeader
@@ -54,7 +54,9 @@ const Section = ({
         title={title}
         headerColor={headerColor}
       />
-      <p style={{ color: "dimgrey", fontSize: 14 }}>{children}</p>
+      <div style={{ color: "dimgrey", fontSize: 14 }}>
+        {children}
+      </div>
     </div>
   );
 };
