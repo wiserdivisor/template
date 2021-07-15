@@ -1,6 +1,6 @@
 import React from "react";
 import data from "../data/anchor_data.json";
-import { footerIcon } from "./layout.module.css";
+import "../styles/footer.css";
 import { StaticImage } from "gatsby-plugin-image";
 import VisitSite from "../components/visitSiteButton";
 
@@ -37,51 +37,11 @@ const Footer = () => {
 
   return (
     <>
-      <div
-        style={{
-          backgroundColor: "#333",
-          color: "white",
-          borderTopWidth: 3,
-          borderTopColor: "teal",
-          borderTopStyle: "solid",
-          padding: 20,
-          display: "grid",
-          placeItems: "center",
-        }}
-      >
-        <div
-          style={{
-            gridGap: "5vw",
-            display: "flex",
-          }}
-        >
-          <div
-            style={{
-              gridColumn: 1,
-              gridColumnEnd: 1,
-            }}
-          >
-            <div
-              style={{
-                color: "teal",
-                backgroundColor: "#fff",
-                borderRadius: 10,
-                padding: 10,
-                display: "flex",
-                flexDirection: "column",
-                border: "2px solid teal",
-                boxShadow: "0px 5px 2px #333",
-              }}
-            >
-              <div
-                style={{
-                  color: "teal",
-                  fontWeight: "bold",
-                  fontSize: 18,
-                }}
-              >
-                Register
-              </div>
+      <div className="footer-div">
+        <div className="footer-flex">
+          <div style={{ gridColumn: 1, gridColumnEnd: 1 }}>
+            <div className="footer-card">
+              <div className="footer-header">Register</div>
               <p style={{ color: "dimgrey" }}>
                 Start your EV journey with us.
                 <br />
@@ -92,13 +52,7 @@ const Footer = () => {
                 <VisitSite showHr={false} name="Register" bgColor="teal" />
               </a>
             </div>
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "row",
-                justifyContent: "center",
-              }}
-            >
+            <div className="cflex-row">
               <a
                 href="https://wa.me/919136359123"
                 target="_blank"
@@ -107,7 +61,7 @@ const Footer = () => {
                 <StaticImage
                   src="../images/whatsapp.png"
                   alt=""
-                  className={footerIcon}
+                  className="footer-icon"
                 />
               </a>
               <a
@@ -118,18 +72,18 @@ const Footer = () => {
                 <StaticImage
                   src="../images/email.png"
                   alt=""
-                  className={footerIcon}
+                  className="footer-icon"
                 />
               </a>
               <StaticImage
                 src="../images/facebook.png"
                 alt=""
-                className={footerIcon}
+                className="footer-icon"
               />
               <StaticImage
                 src="../images/twitter.png"
                 alt=""
-                className={footerIcon}
+                className="footer-icon"
                 style={{ marginRight: 0 }}
               />
             </div>
@@ -139,16 +93,7 @@ const Footer = () => {
           <FooterColumn title="Business" links={franchiseList} />
         </div>
       </div>
-      <div
-        style={{
-          color: "#fff",
-          fontSize: 12,
-          backgroundColor: "grey",
-          padding: "10px 10px 10px 20px",
-        }}
-      >
-        Copyright © AEVRT (India) 2021
-      </div>
+      <div className="copyright-band">Copyright © AEVRT (India) 2021</div>
     </>
   );
 };

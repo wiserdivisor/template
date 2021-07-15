@@ -2,8 +2,21 @@ import React from "react";
 import Layout from "../components/layout";
 import { Section, SectionHeader } from "../components/section";
 import { StaticImage } from "gatsby-plugin-image";
+import businessData from "../data/business_data.json";
+import homeData from "../data/home_data.json";
 
 function Business() {
+  const partnerDesc = businessData.partner_desc;
+  const trainFranP1 = businessData.train_fran_p1;
+  const trainFranP2 = businessData.train_fran_p2;
+  const whoP1 = businessData.who_p1;
+  const whoP2 = businessData.who_p2;
+  const projConsulDesc = businessData.proj_consul_desc;
+  const projConsulListHead = businessData.proj_consul_list_head;
+  const projConsulList = businessData.proj_consul_list;
+  const hireP1 = homeData.join_rev;
+  const hireP2 = homeData.scope.part1;
+
   return (
     <Layout pageTitle="Business">
       <Section title="Partner with us - Be our franchise" idName="partner">
@@ -14,47 +27,23 @@ function Business() {
         />
         <br />
         <br />
-        To carry the EV mission of AEVRT forward, to the most remote locations
-        of our country and abroad, AEVRT invites eligible parties to partner
-        with us, in the role of a franchise.
+        {partnerDesc}
         <br />
         <br />
         <SectionHeader title="AEVRT Training Franchise" idName="train_fran" />
         <br />
-        Establish a AEVRT authorised training franchise in your hometown and
-        create professionally trained manpower of the future in EV, our
-        state-of-art training methodologies and internationally renowned
-        training curriculum covers existing and future technologies in electric
-        vehicles.
+        {trainFranP1}
         <br />
         <br />
-        Well-equipped with latest tools and testing equipment, AEVRT-EV
-        workshops provide adequate and comprehensive skills and practice for
-        various processes and procedures involved in EV assembly, fabrication,
-        testing, maintenance, repairs and commercial functions such as spare
-        parts, procurement, inventory management etc. Best in industry training
-        faculties with online consultation system. Meticulously designed
-        curriculum which covers entire range of training needs of all levels of
-        students. Large collection of online study material, expert guest
-        lectures by entrepreneurs, manufacturers, assembly and training videos.
-        Form the entire ecosystem of AEVRT authorised training franchise.
+        {trainFranP2}
         <br />
         <br />
         <SectionHeader title="Who can be a franchise?" idName="who_fran" />
         <br />
-        Any individual, or legal entity, who can fulfill the minimum
-        requirements of becoming a AEVRT franchise can apply. There are no
-        restrictions, pertaining to age, qualification and location. Any
-        previous experience of operating educational institutions
-        coaching/computer classes, vocational training centres will be an added
-        advantage. Persons who are qualified trainers, teachers, or persons with
-        similar profiles are encouraged to apply.
+        {whoP1}
         <br />
         <br />
-        Applicants should possess sound financial capacities for undertaking
-        promotional activites to create local awareness about the training
-        programme. For futher details kindly share your personal and
-        professional profile on{" "}
+        {whoP2}
         <a
           href="mailto:aevrt.india@gmail.com"
           style={{ textDecoration: "none" }}
@@ -69,32 +58,51 @@ function Business() {
           style={{ borderRadius: 10 }}
         />
         <p>
-          Get your dream projects up and running, within your scheduled
-          deadlines without compromise and delays. Engage the services of our
-          expert project consultants, experienced and expert project managers
-          from the industry and observe your project taking shape as per plans.
+          {projConsulDesc}
           <br />
           <br />
-          <b>AEVRT provides project consultancy services for :</b>
+          <b>{projConsulListHead}</b>
           <ul style={{ marginLeft: -25 }}>
-            <li>EV Assembly factories and units</li>
-            <li>EV delivery vehicle fleet management</li>
-            <li>EV industry online business strategies</li>
-            <li>EV aggregator business models solutions</li>
-            <li>EV maintenance and service unit setup</li>
-            <li>EV brand design and development</li>
-            <li>EV battery packs manufacturing unit setup</li>
-            <li>EV battery charging & swap stations</li>
-            <li>EV solar charging solution & implementation</li>
-            <li>EV technology research & development</li>
-            <li>EV sales, service and spare part outlets</li>
-            <li>EV products marketing and point of sale setups</li>
-            <li>EV components sourcing, procurement and imports</li>
-            <li>
-              EV finance / government subsidies / production linked incentives
-            </li>
+            {projConsulList.map((x) => (
+              <li>{x}</li>
+            ))}
           </ul>
         </p>
+      </Section>
+      <Section title="Hire our trained man-power">
+        <StaticImage
+          src="../images/trainees.jpg"
+          alt=""
+          style={{ borderRadius: 10 }}
+        />
+        <br />
+        <br />
+        India is headed towards becoming a manufacturing hub for electric
+        vehicles in the next five years. The EV industry growth is estimated at
+        Rs.500 billion by 2025. This industry will require large numbers of
+        skilled, semi-skilled, assemblers/workers, supervisors, engineers,
+        quality-contol staff, material and inventory staff.
+        <br />
+        <br />
+        Presently the Electric Vehicle industry is experiencing an acute
+        shortage of manpower with skills at par with the industry's standard
+        requirements. EV-OEM's are aggressuvely gearing up to increase their
+        production capacity. As a result there will be a sharp increase in the
+        demand for trained manpower in the EV industry.
+        <br />
+        <br />
+        AEVRT's specialised EV training programs impart EV industry specific
+        skill-based training for manpower at all levels, keeping in mind the
+        skill requirements of small, medium and large-scale EV industries. The
+        training modules include comprehensive training in technical skills
+        (mechanical & electrical), line and table assembly, material handling,
+        tool handling, testing and measuring equipment, quality control, design
+        and development, commercial training and other allied soft-skills.
+        <br />
+        <br />
+        Companies can benefit from hiring this trained workforce, by means of
+        early productivity, minimal product training, prevention of losses due
+        to rework and parts damages.
       </Section>
     </Layout>
   );

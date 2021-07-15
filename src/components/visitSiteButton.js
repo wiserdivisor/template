@@ -1,6 +1,6 @@
 import React from "react";
-import { btn } from "./btn.module.css";
-import { divider } from "./layout.module.css";
+import "../styles/btn.css";
+import "../styles/layout.css";
 
 function VisitSite({
   name = "Visit Site",
@@ -9,12 +9,12 @@ function VisitSite({
 }) {
   return (
     <div>
-      <button className={btn} style={{ backgroundColor: bgColor }}>
+      <button className="btn" style={{ backgroundColor: bgColor }}>
         {name}
       </button>
       {showHr && (
         <hr
-          className={divider}
+          className="divider"
           style={{
             backgroundColor: "grey",
             marginTop: 20,

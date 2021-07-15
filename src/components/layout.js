@@ -1,13 +1,5 @@
 import React from "react";
-import {
-  container,
-  siteLogo,
-  headerDiv,
-  headerText,
-  headerSubtext,
-  divider,
-} from "./layout.module.css";
-import "./page.css";
+import "../styles/layout.css";
 import { Helmet } from "react-helmet";
 import Navbar from "./navbar";
 import { StaticImage } from "gatsby-plugin-image";
@@ -17,7 +9,7 @@ import { Footer } from "./footer";
 
 const Layout = ({ pageTitle, children }) => {
   return (
-    <main className={container}>
+    <main className="container">
       <Helmet
         htmlAttributes={{ lang: "en" }}
         meta={[
@@ -25,11 +17,7 @@ const Layout = ({ pageTitle, children }) => {
             name: "viewport",
             content: "width=device-width, initial-scale=1.0",
           },
-          {
-            name: "description",
-            content:
-              "EV Course - Electric Vehicles Assembly, Maintenence & Repairs Training. Includes sizing, testing, troubleshooting and component-level repairs of battery, EV Controller, DC to DC converter and battery pack assembly. EV motors and hubs.",
-          },
+
           { property: "og:type", content: "website" },
           {
             property: "og:title",
@@ -47,8 +35,13 @@ const Layout = ({ pageTitle, children }) => {
       >
         <title>{pageTitle} - ÆVRT</title>
         <meta property="og:url" content="https://trainingev.gatsbyjs.io" />
+
+        <meta
+          name="description"
+          content="EV Course - Electric Vehicles Assembly, Maintenence & Repairs Training. Includes sizing, testing, troubleshooting and component-level repairs of battery, EV Controller, DC to DC converter and battery pack assembly. EV motors and hubs."
+        />
       </Helmet>
-      <div className={headerDiv}>
+      <div className="headerDiv">
         <div
           style={{
             display: "flex",
@@ -56,15 +49,15 @@ const Layout = ({ pageTitle, children }) => {
             justifyContent: "center",
           }}
         >
-          <div className={siteLogo}>
+          <div className="siteLogo">
             <StaticImage src="../images/logo.png" alt="" />
           </div>
-          <p className={headerText}>{pageTitle}</p>
+          <p className="headerText">{pageTitle}</p>
         </div>
         {pageTitle[0] === "A" ? (
           <>
-            <hr className={divider} />
-            <p className={headerSubtext}>
+            <hr className="divider" />
+            <p className="headerSubtext">
               A KBP Trust & Institute of Engineering and Applied Sciences
               Initiative
             </p>
