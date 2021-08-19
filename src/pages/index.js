@@ -40,6 +40,42 @@ const HomePage = () => {
           href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
         />
       </Helmet>
+      <div 
+        style={{ 
+          margin:"10px 0px 10px 0px",
+          textAlign:"center", 
+          alignItems:"row" 
+        }}
+      >
+        <StaticImage
+           src="../images/msmeGov.jpeg"
+           alt="Man riding an EV scooter"
+           style={{ 
+             width:"24%",
+           }} 
+        />
+        <StaticImage
+           src="../images/msmeForum.jpeg"
+           alt="Man riding an EV scooter"
+           style={{ 
+             width:"20%",
+             margin:"0px 10px 0px"             
+           }} 
+        />
+        <StaticImage
+           src="../images/policyPromo.jpeg"
+           alt="Man riding an EV scooter"
+           style={{ 
+              width:"20%",
+              margin:"0px 10px 0px"             
+           }} 
+        />
+        <StaticImage
+           src="../images/startupIndia.jpeg"
+           alt="Man riding an EV scooter"
+           style={{ width:"20%" }} 
+        />
+      </div>
       <div
         style={{
           height: "10%",
