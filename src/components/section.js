@@ -18,6 +18,9 @@ const SectionHeader = ({
         <p style={{ color: headerColor, fontWeight: "bold", fontSize: 20 }}>
           {title}
         </p>
+        <div style={{ width:200, marginLeft:'auto' }}>
+          <StaticImage src="../images/evalueLogo.PNG" style={{alignSelf:"flex-end"}} alt="end_icon" />
+        </div>
       </div>
       {showHr && <hr style={{ marginTop: -5 }} />}
     </>

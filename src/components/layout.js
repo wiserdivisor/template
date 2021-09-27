@@ -56,13 +56,17 @@ const Layout = ({ pageTitle, children }) => {
         </div>
         {pageTitle[0] === "A" ? (
           <>
-            <hr className="divider" />
             <p className="headerSubtext">
               A KBP Trust & Institute of Engineering and Applied Sciences
               Initiative
             </p>
+            <hr className="divider" />
           </>
         ) : null}
+
+        <div style={{ display:'flex', justifyContent:'center' }}>
+          <StaticImage src="../images/evalueBanner.PNG" style={{ width:700, borderRadius:10 }} alt="" />
+        </div>
       </div>
       <Navbar title={pageTitle} />
       <div style={{ minWidth: 500, maxWidth: "50%", margin: "auto" }}>
