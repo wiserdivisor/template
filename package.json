@@ -1,9 +1,9 @@
 {
-  "name": "template",
+  "name": "traningev",
   "version": "1.0.0",
   "private": true,
-  "description": "template",
-  "author": "wiserdivisor",
+  "description": "traningev",
+  "author": "Vignesh Reddy",
   "keywords": [
     "gatsby"
   ],
@@ -12,19 +12,24 @@
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "gatsby": "^3.6.1",
-    "gatsby-cli": "^3.14.0",
-    "gatsby-plugin-gatsby-cloud": "^2.6.1",
-    "gatsby-plugin-image": "^1.6.0",
-    "gatsby-plugin-react-helmet": "^4.6.0",
-    "gatsby-plugin-sharp": "^3.6.0",
-    "gatsby-source-filesystem": "^3.6.0",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
+    "gatsby": "^5.12.4",
+    "gatsby-plugin-image": "^3.12.0",
+    "gatsby-plugin-react-helmet": "^6.12.0",
+    "gatsby-plugin-sharp": "^5.12.0",
+    "gatsby-source-filesystem": "^5.12.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
-    "react-slick": "^0.28.1"
+    "react-slick": "^0.29.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.3.3",
+    "@types/react": "^18.2.14",
+    "@types/react-dom": "^18.2.6",
+    "typescript": "^5.1.6"
   }
 }
