@@ -205,7 +205,7 @@ const HomePage = () => {
           <StaticImage
             src="../images/cert.jpeg"
             alt="EV training certificate"
-            style={{ minWidth: 300, maxWidth:'20vw' }}
+            style={{ width: 300, height:500 }}
           />
           <div style={{ marginTop: 10 }}>
             {certification.part1}

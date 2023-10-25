@@ -3,7 +3,7 @@ import Layout from "../components/layout";
 import { Section, SectionHeader } from "../components/section";
 import { StaticImage } from "gatsby-plugin-image";
 import businessData from "../data/business_data.json";
-import homeData from "../data/home_data.json";
+//import homeData from "../data/home_data.json";
 
 function Business() {
   const partnerDesc = businessData.partner_desc;
@@ -14,8 +14,8 @@ function Business() {
   const projConsulDesc = businessData.proj_consul_desc;
   const projConsulListHead = businessData.proj_consul_list_head;
   const projConsulList = businessData.proj_consul_list;
-  const hireP1 = homeData.join_rev;
-  const hireP2 = homeData.scope.part1;
+  //const hireP1 = homeData.join_rev;
+  //const hireP2 = homeData.scope.part1;
 
   return (
     <Layout pageTitle="Business">
